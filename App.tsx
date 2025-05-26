@@ -65,6 +65,7 @@ export default function App() {
 
     notificationListener.current =
       Notifications.addNotificationReceivedListener((notification) => {
+        console.log("Notification Data:", notification?.request.content);
         setDataIs("Open App Notification Data");
         setNotification(notification);
       });
